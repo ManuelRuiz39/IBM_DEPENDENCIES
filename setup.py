@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='IBM_DEPENDENCIES',
-        version='1.00',
+        version='1.0',
         description="This Package help to management of bluegroups and retrieve basic information of bluepages.",
         packages=find_packages(),
         keywords='Bluegroup,BluePages',
