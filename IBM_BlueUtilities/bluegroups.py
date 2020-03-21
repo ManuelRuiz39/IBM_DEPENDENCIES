@@ -4,6 +4,14 @@ import xml.etree.ElementTree as ET
 
 class blueGroups():
     def addMemberTo(self,group,uid,email,password):
+        """ 
+            This method add a new member to your bluegroup previously created. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param uid: User id of new member (9 digits) :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -31,6 +39,14 @@ class blueGroups():
             return error
     
     def deleteMemberTo(self,group,uid,email,password):
+        """ 
+            This method deletes a member from your bluegroup previously created. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param uid: User id of member to remove (9 digits) :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -58,6 +74,14 @@ class blueGroups():
             return error
 
     def addAdminTo(self,group,uid,email,password):
+        """ 
+            This method add a new administrator to your bluegroup previously created. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param uid: User id of new administrator (9 digits) :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -85,6 +109,14 @@ class blueGroups():
             return error
 
     def deleteAdminTo(self,group,uid,email,password):
+        """ 
+            This method deletes an administrator to your bluegroup previously created. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param uid: User id of administrator to remove (9 digits) :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -112,6 +144,15 @@ class blueGroups():
             return error
 
     def createGroup(self,group,description,access,email,password):
+        """ 
+            This method create a new bluegroup. 
+            This method require the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param description: Short description about your bluegroup :str : string.
+                :param access: Access type (Everyone or Owner/Admins):str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             day = datetime.datetime.now()
             day = str(day).split(' ')
@@ -149,6 +190,13 @@ class blueGroups():
             return error
 
     def deleteGroup(self,group,email,password):
+        """ 
+            This method deletes a bluegroup. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -173,6 +221,12 @@ class blueGroups():
             return error
 
     def memberInGroup(self,group,email):
+        """ 
+            This method shows the member that belongs to bluegroup. 
+            This method require the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param email: Email from the person that you are looking for :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -197,6 +251,11 @@ class blueGroups():
             return error
 
     def listGroup(self,group):
+        """ 
+            This method shows all members that  belong to bluegroup. 
+            This method require the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -221,6 +280,14 @@ class blueGroups():
             return error
 
     def changeOwnerGroup(self,group,uid,email,password):
+        """ 
+            This method changes the current owner of bluegroup. 
+            This method require the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param uid: User id which will be the owner :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -248,6 +315,14 @@ class blueGroups():
             return error
 
     def renameGroup(self,group,name,email,password):
+        """ 
+            This method renames to bluegroup. 
+            This method requires the next parameters:
+                :param bluegroup: Name of current bluegroup :str : string.
+                :param name: New name of bluegroup :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
@@ -281,6 +356,14 @@ class blueGroups():
             return error
 
     def changeDescription(self,group,description,email,password):
+        """ 
+            This method changes description from your bluegroup. 
+            This method requires the next parameters:
+                :param bluegroup: Name of bluegroup :str : string.
+                :param description: New short description about your bluegroup :str : string.
+                :param email: Your Email with domain @ibm :str : string.
+                :param password: Your password of intranet :str : string.
+        """
         try:
             group = group.split(' ')
             new_group = ''
